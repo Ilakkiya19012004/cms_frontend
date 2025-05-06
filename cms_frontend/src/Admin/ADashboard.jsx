@@ -5,8 +5,7 @@ function ADashboard() {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    // You can add any logout logic here, such as clearing session or local storage
-    navigate('/login');  // Redirect to login page
+    navigate('/'); 
   };
 
   return (
