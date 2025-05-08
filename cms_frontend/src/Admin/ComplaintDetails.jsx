@@ -1,7 +1,19 @@
-import React from 'react'
+import { useParams, useLocation } from "react-router-dom";
 
-export default function ComplaintDetails() {
+function ComplaintDetails() {
+  const { id } = useParams();  // To access the `id` from the URL
+  const { state: complaint } = useLocation();  // To access the passed state data
+  
   return (
-    <div>ComplaintDetails</div>
-  )
+    <div>
+      <h2>Complaint Details</h2>
+      <p><strong>Ticket ID:</strong> #{id}</p>
+      <p><strong>Product:</strong> {complaint.pname}</p>
+      <p><strong>Status:</strong> {complaint.status}</p>
+      <p><strong>Description:</strong> {complaint.description}</p>
+      {/* You can also display other complaint details here */}
+    </div>
+  );
 }
+
+export default ComplaintDetails;

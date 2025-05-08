@@ -1,36 +1,43 @@
 import React, { useState } from 'react';
 import './Feedback.css';
+
 function Feedback() {
   const [rating, setRating] = useState(0);
   const [hover, setHover] = useState(0);
   const [description, setDescription] = useState('');
+  const [submitted, setSubmitted] = useState(false); // New state
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert(`Submitted: ${rating} stars, Description: ${description}`);
+    setSubmitted(true); // Show success message
+    // Optionally reset form:
+    setRating(0);
+    setDescription('');
+    setTimeout(() => setSubmitted(false), 3000); // Hide after 3s
   };
 
   return (
     <div className="feedback-container">
       <h2>Give Feedback</h2>
+
+      {submitted && (
+        <div className="success-message">Feedback submitted successfully!</div>
+      )}
+
       <form onSubmit={handleSubmit}>
         <div className="stars">
-          {[...Array(5)].map((star, index) => {
+          {[...Array(5)].map((_, index) => {
             const starValue = index + 1;
             return (
-              <label key={index}>
-                <input
-                  type="radio"
-                  name="rating"
-                  value={starValue}
-                  onClick={() => setRating(starValue)}
-                />
-                <span
-                  className={`star ${starValue <= (hover || rating) ? 'filled' : ''}`}
-                  onMouseEnter={() => setHover(starValue)}
-                  onMouseLeave={() => setHover(0)}
-                >★</span>
-              </label>
+              <span
+                key={index}
+                className={`star ${starValue <= (hover || rating) ? 'filled' : ''}`}
+                onClick={() => setRating(starValue)}
+                onMouseEnter={() => setHover(starValue)}
+                onMouseLeave={() => setHover(0)}
+              >
+                ★
+              </span>
             );
           })}
         </div>

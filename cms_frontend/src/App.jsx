@@ -29,6 +29,7 @@ function App() {
         <Route path="/new-complaints" element={<NewComplaints />} />
         <Route path="/ongoing-complaints" element={<OngoingComplaints />} />
         <Route path="/performance" element={<Performance />} />
+        {/* <Route path="/complaint-details/:id" element={<ComplaintDetails />} /> */}
       </Routes>
     </Router>
   );
