@@ -5,15 +5,14 @@ function Feedback() {
   const [rating, setRating] = useState(0);
   const [hover, setHover] = useState(0);
   const [description, setDescription] = useState('');
-  const [submitted, setSubmitted] = useState(false); // New state
+  const [submitted, setSubmitted] = useState(false); 
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSubmitted(true); // Show success message
-    // Optionally reset form:
+    setSubmitted(true); 
     setRating(0);
     setDescription('');
-    setTimeout(() => setSubmitted(false), 3000); // Hide after 3s
+    setTimeout(() => setSubmitted(false), 3000); 
   };
 
   return (

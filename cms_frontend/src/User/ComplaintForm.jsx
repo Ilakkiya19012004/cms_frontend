@@ -5,6 +5,7 @@ import './ComplaintForm.css';
 function ComplaintForm() {
   const [product, setProduct] = useState("");
   const [description, setDescription] = useState("");
+  const [model, setModel] = useState("");
   const [purchaseDate, setPurchaseDate] = useState("");
   const [photo, setPhoto] = useState(null);
   const navigate = useNavigate();
@@ -22,6 +23,7 @@ function ComplaintForm() {
     const newTicket = {
       id: Math.floor(Math.random() * 1000000),
       product,
+      model,
       description,
       purchaseDate,
       warrantyStatus,
@@ -50,6 +52,18 @@ function ComplaintForm() {
             <option value="LG AC">LG AC</option>
             <option value="LG Washing Machine">LG Washing Machine</option>
           </select>
+        </div>
+
+          <div className="form-group">
+          <label className="form-label">Model No.</label>
+          <textarea
+            value={description}
+            onChange={(e) => setModel(e.target.value)}
+            className="form-input"
+            rows="1"
+            placeholder="Enter Model No."
+            required
+          ></textarea>
         </div>
 
         <div className="form-group">

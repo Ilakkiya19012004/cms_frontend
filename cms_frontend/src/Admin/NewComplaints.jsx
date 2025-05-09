@@ -38,7 +38,6 @@ function NewComplaints() {
     }
   ];
 
-  // Filter only complaints with status 'new-complaints'
   const newComplaints = complaints.filter(c => c.status === 'new-complaints');
 
   return (

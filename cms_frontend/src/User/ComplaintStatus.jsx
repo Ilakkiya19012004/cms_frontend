@@ -1,4 +1,4 @@
-import './ComplaintStatus.css'; // Ensure this file exists
+import './ComplaintStatus.css'; 
 
 function ComplaintStatus() {
   const complaints = [

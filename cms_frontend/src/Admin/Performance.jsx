@@ -1,6 +1,5 @@
 import React from 'react';
-import './Performance.css';  // Import the CSS file
-
+import './Performance.css';  
 const performances = [
   { id: 1, rating: 4, feedback: 'Good' },
   { id: 2, rating: 3, feedback: 'Moderate' },
@@ -10,7 +9,7 @@ const performances = [
 
 export default function Performance() {
   const total = performances.reduce((sum, p) => sum + p.rating, 0);
-  const avg = (total / performances.length).toFixed(2); // Round to 2 decimals
+  const avg = (total / performances.length).toFixed(2); 
 
   return (
     <div className="performance-container">

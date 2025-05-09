@@ -1,8 +1,8 @@
 import { useParams, useLocation } from "react-router-dom";
 
 function ComplaintDetails() {
-  const { id } = useParams();  // To access the `id` from the URL
-  const { state: complaint } = useLocation();  // To access the passed state data
+  const { id } = useParams();
+  const { state: complaint } = useLocation();
   
   return (
     <div>

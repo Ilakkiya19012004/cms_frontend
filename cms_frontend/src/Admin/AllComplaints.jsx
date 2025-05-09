@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'; // Import Link for routing
+import { Link } from 'react-router-dom'; 
 import './AllComplaints.css';
 
 function AllComplaints() {
