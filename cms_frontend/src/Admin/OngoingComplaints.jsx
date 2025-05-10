@@ -62,11 +62,7 @@ function OngoingComplaints() {
               <td>{c.cdate}</td>
               <td>{c.phone}</td>
               <td>{c.warranty}</td>
-              <td>
-                <Link to={`/complaint-details/${c.id}`} state={c}>
-                  View Details
-                </Link>
-              </td>
+             <td><Link to={`/complaint-details/${c.id}`} state={c}>View Details</Link></td>
             </tr>
           ))}
         </tbody>
