@@ -11,7 +11,7 @@ import AllComplaints from "./Admin/AllComplaints.jsx";
 import NewComplaints from "./Admin/NewComplaints.jsx";
 import OngoingComplaints from "./Admin/OngoingComplaints.jsx";
 import Performance from "./Admin/Performance.jsx";
-
+import ComplaintDetails from "./Admin/ComplaintDetails.jsx";
 
 function App() {
   return (
@@ -29,7 +29,7 @@ function App() {
         <Route path="/new-complaints" element={<NewComplaints />} />
         <Route path="/ongoing-complaints" element={<OngoingComplaints />} />
         <Route path="/performance" element={<Performance />} />
-        {/* <Route path="/complaint-details/:id" element={<ComplaintDetails />} /> */}
+        <Route path="/complaint-details/:id" element={<ComplaintDetails />} />
       </Routes>
     </Router>
   );
