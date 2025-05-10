@@ -11,7 +11,6 @@ function ComplaintDetails() {
       <p><strong>Product:</strong> {complaint.pname}</p>
       <p><strong>Status:</strong> {complaint.status}</p>
       <p><strong>Description:</strong> {complaint.description}</p>
-      {/* You can also display other complaint details here */}
     </div>
   );
 }
