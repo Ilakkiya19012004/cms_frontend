@@ -1,0 +1,39 @@
+.ticket-container {
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .ticket-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+  }
+  
+  .ticket-container p {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #444;
+  }
+  
+  .ticket-container strong {
+    color: #222;
+  }
+  
+  .ticket-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .ticket-link:hover {
+    text-decoration: underline;
+    color: #0056b3;
+  }
+  

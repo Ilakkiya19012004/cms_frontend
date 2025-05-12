@@ -1,0 +1,60 @@
+#complaintStatus {
+    margin: 30px auto;
+    padding: 20px;
+    width: 80%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+    font-size: 16px;
+  }
+  
+  th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .status {
+    padding: 5px 10px;
+    border-radius: 4px;
+  }
+  
+  .status.registered {
+    background-color: #ffeb3b;
+    color: #333;
+  }
+  
+  .status.in-process {
+    background-color: #ff9800;
+    color: #fff;
+  }
+  
+  .status.resolved {
+    background-color: #4caf50;
+    color: #fff;
+  }
+  

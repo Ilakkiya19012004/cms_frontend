@@ -1,0 +1,61 @@
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  header h1 {
+    font-size: 1.8rem;
+    color: #333;
+  }
+  
+  main h2 {
+    font-size: 1.5rem;
+    color: #444;
+  }
+  
+  main p {
+    margin: 10px 0 30px;
+    color: #666;
+  }
+  
+  .button-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+  }
+  
+  .dashboard-btn {
+    text-decoration: none;
+    background-color: #f0f4f8;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: #333;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .dashboard-btn span {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .dashboard-btn:hover {
+    background-color: #dbeafe;
+    transform: translateY(-3px);
+  }
+  
