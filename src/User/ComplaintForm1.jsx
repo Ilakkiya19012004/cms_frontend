@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import './ComplaintForm.css';
+import './ComplaintForm1.css';
 import UserNavbar from "./UserNavbar";
 
 function ComplaintForm() {

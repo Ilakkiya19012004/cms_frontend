@@ -1,10 +1,13 @@
 import { useParams, useLocation } from "react-router-dom";
+import AdminNavbar from "./AdminNavbar";
 
 function ComplaintDetails() {
   const { id } = useParams();
   const { state: complaint } = useLocation();
   
   return (
+    <>
+    <AdminNavbar/>
     <div>
       <h2>Complaint Details</h2>
       <p><strong>Ticket ID:</strong> #{id}</p>
@@ -12,6 +15,7 @@ function ComplaintDetails() {
       <p><strong>Status:</strong> {complaint.status}</p>
       <p><strong>Description:</strong> {complaint.description}</p>
     </div>
+    </>
   );
 }
 

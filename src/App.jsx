@@ -1,5 +1,6 @@
 import { Routes, Route, useLocation } from "react-router-dom";
-import ComplaintForm from "./User/ComplaintForm.jsx";
+import ComplaintForm1 from "./User/ComplaintForm1.jsx";
+import ComplaintForm2 from "./User/ComplaintForm2.jsx";
 import TicketPage from "./User/TicketPage.jsx";
 import Login from "./Login";
 import HomePage from "./HomePage.jsx";
@@ -13,11 +14,10 @@ import NewComplaints from "./Admin/NewComplaints.jsx";
 import OngoingComplaints from "./Admin/OngoingComplaints.jsx";
 import Performance from "./Admin/Performance.jsx";
 import ComplaintDetails from "./Admin/ComplaintDetails.jsx";
-import UserNavbar from "./User/UserNavbar.jsx";
-import AdminNavbar from "./Admin/AdminNavbar.jsx";
 import { useState } from "react";
 import image from './assets/image4.png';
 import PasswordReset from "./User/PasswordReset.jsx";
+import ServiceType from "./User/ServiceType.jsx";
 
 function App() {
   const [userRole] = useState("USER");
@@ -48,7 +48,9 @@ function App() {
         <Route path="/forgot-password" element={<PasswordReset />}/>
         <Route path="/udashboard" element={<UDashboard />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/complaint" element={<ComplaintForm />} />
+        <Route path="/service-type" element={<ServiceType />} />
+        <Route path="/complaint1" element={<ComplaintForm1 />} />
+        <Route path="/complaint2" element={<ComplaintForm2 />} />
         <Route path="/complaintStatus" element={<ComplaintStatus />} />
         <Route path="/ticket/:id" element={<TicketPage />} />
         <Route path="/feedback" element={<Feedback />} />

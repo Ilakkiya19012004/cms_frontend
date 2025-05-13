@@ -15,15 +15,15 @@ function Dashboard() {
     <div className="container">
       <header>
         <h1>Complaint Management Dashboard</h1>
-        <button onClick={handleLogout} style={{ float: 'right', backgroundColor: '#ff4d4d', color: 'white', border: 'none', padding: '10px', borderRadius: '6px', cursor: 'pointer' }}>
+        {/* <button onClick={handleLogout} style={{ float: 'right', backgroundColor: '#ff4d4d', color: 'white', border: 'none', padding: '10px', borderRadius: '6px', cursor: 'pointer' }}>
           Logout
-        </button>
+        </button> */}
       </header>
       <main>
         <h2>Welcome to your Dashboard</h2>
         <p>Use the options below to navigate:</p>
         <div className="button-grid">
-          <Link to="/complaint" className="dashboard-btn">
+          <Link to="/service-type" className="dashboard-btn">
             <span role="img" aria-label="file">📝</span>
             <p>File Complaint</p>
           </Link>
