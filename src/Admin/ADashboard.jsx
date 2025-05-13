@@ -15,7 +15,7 @@ function ADashboard() {
     <div className="container">
       <header>
         <h1>Service Agent Dashboard</h1>
-        <button
+        {/* <button
           onClick={handleLogout}
           style={{
             float: 'right',
@@ -28,7 +28,7 @@ function ADashboard() {
           }}
         >
           Logout
-        </button>
+        </button> */}
       </header>
       <main>
         <h2>Manage Complaints Efficiently</h2>

@@ -1,5 +1,6 @@
 import React from 'react';
 import './Performance.css';  
+import AdminNavbar from './AdminNavbar';
 const performances = [
   { id: 1, rating: 4, feedback: 'Good' },
   { id: 2, rating: 3, feedback: 'Moderate' },
@@ -12,6 +13,7 @@ export default function Performance() {
   const avg = (total / performances.length).toFixed(2); 
 
   return (
+    <><AdminNavbar/>
     <div className="performance-container">
       <h2>Performance</h2>
       <table>
@@ -33,5 +35,6 @@ export default function Performance() {
 
       <p><strong>Overall Performance Rating:</strong> {avg}</p>
     </div>
+    </>
   );
 }

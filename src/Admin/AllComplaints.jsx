@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'; 
 import './AllComplaints.css';
+import AdminNavbar from './AdminNavbar';
 
 function AllComplaints() {
   const complaints = [
@@ -17,6 +18,8 @@ function AllComplaints() {
   const filteredComplaints = complaints.filter(c => c.status === 'complaint-registered' || c.status === 'complaint-in-process');
 
   return (
+    <>
+    <AdminNavbar/>
     <div id="complaintStatus">
       <h1>All Complaints</h1>
       <table>
@@ -49,6 +52,7 @@ function AllComplaints() {
         </tbody>
       </table>
     </div>
+    </>
   );
 }
 
