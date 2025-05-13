@@ -46,6 +46,7 @@ function NewComplaints() {
     <AdminNavbar/>
     <div id="complaintStatus">
       <h1>New Complaints</h1>
+      <div style={{ overflowX: 'auto' }}>
       <table>
         <thead>
           <tr>
@@ -70,6 +71,7 @@ function NewComplaints() {
           ))}
         </tbody>
       </table>
+      </div>
     </div>
     </>
   );

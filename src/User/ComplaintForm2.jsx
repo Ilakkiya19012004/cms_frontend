@@ -11,7 +11,8 @@ function ComplaintForm2() {
   const [photo, setPhoto] = useState(null);
   const [address, setAddress] = useState("");
   const [phone, setPhone] = useState("");
-
+  const [city, setCity] = useState("");
+  
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
@@ -108,6 +109,18 @@ function ComplaintForm2() {
               placeholder="Enter your address for home service"
               required
             ></textarea>
+          </div>
+
+          <div className="form-group">
+            <label className="form-label">City</label>
+            <input
+              type="text"
+              value={city}
+              onChange={(e) => setCity(e.target.value)}
+              className="form-input"
+              placeholder="Enter your city"
+              required
+            />
           </div>
 
           <div className="form-group">

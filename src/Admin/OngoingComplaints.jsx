@@ -45,6 +45,7 @@ function OngoingComplaints() {
     <><AdminNavbar/>
     <div id="complaintStatus">
       <h1>New Complaints</h1>
+      <div style={{ overflowX: 'auto' }}>
       <table>
         <thead>
           <tr>
@@ -69,6 +70,7 @@ function OngoingComplaints() {
           ))}
         </tbody>
       </table>
+      </div>
     </div>
     </>
   );

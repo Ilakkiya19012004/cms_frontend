@@ -8,6 +8,14 @@
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
     background-color: #ffffff;
   }
+
+body {
+  background-image: url('image4.png');
+  background-repeat: repeat-y;         /* Repeat vertically only */
+  background-position: top center;     /* Optional: align horizontally centered */
+  background-size: auto;               /* Keeps original image size */
+}
+
   
   .form-title {
     font-size: 1.875rem;

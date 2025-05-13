@@ -14,32 +14,22 @@ import NewComplaints from "./Admin/NewComplaints.jsx";
 import OngoingComplaints from "./Admin/OngoingComplaints.jsx";
 import Performance from "./Admin/Performance.jsx";
 import ComplaintDetails from "./Admin/ComplaintDetails.jsx";
-import { useState } from "react";
 import image from './assets/image4.png';
 import PasswordReset from "./User/PasswordReset.jsx";
 import ServiceType from "./User/ServiceType.jsx";
-
+import ALanding from "./Admin/ALanding.jsx";
 function App() {
-  const [userRole] = useState("USER");
-  const location = useLocation();
 
   return (
     <div style={{
       backgroundImage: `url(${image})`,
-      backgroundRepeat: 'repeat',
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      backgroundAttachment: 'fixed',
-      height: '100vh',
-      width: '100vw',
+  backgroundRepeat: 'repeat',         // Repeats both horizontally and vertically
+  backgroundSize: 'auto',             // Keeps original image size
+  backgroundPosition: 'top left',     // Optional: aligns image to top-left
+  minHeight: '100vh',                 // Covers full screen height
+  width: '100%', 
+      
     }}>
-{/*    
-      {!["/","/login", "/register", "/forgot-password"].includes(location.pathname) && (
-  <>
-    <AdminNavbar />
-    <UserNavbar />
-  </>
-)}   */}
     
       <Routes>
         {/* User Routes */}
@@ -56,6 +46,7 @@ function App() {
         <Route path="/feedback" element={<Feedback />} />
 
         {/* Admin Routes */}
+        <Route path="/aLanding" element={<ALanding />} />
         <Route path="/aDashboard" element={<ADashboard />} />
         <Route path="/all-complaints" element={<AllComplaints />} />
         <Route path="/new-complaints" element={<NewComplaints />} />

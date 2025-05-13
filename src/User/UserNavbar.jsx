@@ -12,7 +12,7 @@ const UserNavbar = () => {
       </div>
       <div className="nav-right">
         <Link to="/udashboard" className="nav-link">DASHBOARD</Link>
-        <Link to="/complaint" className="nav-link">FILE COMPLAINT</Link>
+        <Link to="/service-type" className="nav-link">FILE COMPLAINT</Link>
         <Link to="/complaintStatus" className="nav-link">COMPLAINT STATUS</Link>
         <Link to="/feedback" className="nav-link">FEEDBACK</Link>
         <Link to="/" className="nav-link">LOGOUT</Link>

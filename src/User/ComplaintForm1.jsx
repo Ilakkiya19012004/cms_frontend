@@ -9,6 +9,7 @@ function ComplaintForm() {
   const [model, setModel] = useState("");
   const [purchaseDate, setPurchaseDate] = useState("");
   const [photo, setPhoto] = useState(null);
+  const [city, setCity] = useState("");
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
@@ -101,6 +102,18 @@ function ComplaintForm() {
             className="form-input"
           />
         </div>
+
+         <div className="form-group">
+            <label className="form-label">City</label>
+            <input
+              type="text"
+              value={city}
+              onChange={(e) => setCity(e.target.value)}
+              className="form-input"
+              placeholder="Enter your city"
+              required
+            />
+          </div>
 
         <button type="submit" className="form-submit-btn">
           Submit Complaint

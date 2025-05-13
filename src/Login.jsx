@@ -11,7 +11,7 @@ function ULogin() {
   const handleLogin = (e) => {
     e.preventDefault();
     if (email === "admin@gmail.com" && password === "123") {
-      navigate('/adashboard');
+      navigate('/aLanding');
     } else {
       navigate('/udashboard');
     }

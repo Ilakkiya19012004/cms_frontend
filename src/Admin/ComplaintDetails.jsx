@@ -1,6 +1,6 @@
 import { useParams, useLocation } from "react-router-dom";
 import AdminNavbar from "./AdminNavbar";
-
+import './ComplaintDetails.css'
 function ComplaintDetails() {
   const { id } = useParams();
   const { state: complaint } = useLocation();
@@ -8,7 +8,7 @@ function ComplaintDetails() {
   return (
     <>
     <AdminNavbar/>
-    <div>
+    <div className="complaint-container">
       <h2>Complaint Details</h2>
       <p><strong>Ticket ID:</strong> #{id}</p>
       <p><strong>Product:</strong> {complaint.pname}</p>
