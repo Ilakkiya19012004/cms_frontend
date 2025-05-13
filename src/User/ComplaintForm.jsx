@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import './ComplaintForm.css';
+import UserNavbar from "./UserNavbar";
 
 function ComplaintForm() {
   const [product, setProduct] = useState("");
@@ -36,6 +37,8 @@ function ComplaintForm() {
   };
 
   return (
+    <>
+    <UserNavbar/>
     <div className="complaint-form-container">
       <h1 className="form-title">Submit a Complaint</h1>
       <form onSubmit={handleSubmit} className="form">
@@ -104,6 +107,7 @@ function ComplaintForm() {
         </button>
       </form>
     </div>
+    </>
   );
 }
 

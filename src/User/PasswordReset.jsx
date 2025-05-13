@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import SimpleNavbar from '../SimpleNavBar';
 
 function PasswordReset() {
   const [username, setUsername] = useState('');
@@ -25,6 +26,8 @@ function PasswordReset() {
   };
 
   return (
+    <>
+    <SimpleNavbar/>
     <div style={styles.container}>
       <h2>Reset Password</h2>
       <form onSubmit={handleReset} style={styles.form}>
@@ -57,6 +60,7 @@ function PasswordReset() {
 
       {message && <p style={styles.message}>{message}</p>}
     </div>
+    </>
   );
 }
 

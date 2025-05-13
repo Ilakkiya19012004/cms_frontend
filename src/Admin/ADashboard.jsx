@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import AdminNavbar from './AdminNavbar';
 
 function ADashboard() {
   const navigate = useNavigate();
@@ -9,6 +10,8 @@ function ADashboard() {
   };
 
   return (
+    <>
+    <AdminNavbar/>
     <div className="container">
       <header>
         <h1>Service Agent Dashboard</h1>
@@ -50,6 +53,7 @@ function ADashboard() {
         </div>
       </main>
     </div>
+    </>
   );
 }
 

@@ -1,6 +1,7 @@
 import './Login.css';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import SimpleNavbar from './SimpleNavBar.jsx';
 
 function ULogin() {
   const navigate = useNavigate();
@@ -23,10 +24,16 @@ function ULogin() {
 
   const handleForgotPassword = (e) => {
     e.preventDefault();
-    navigate('/forgot-password'); // You can create this route/component
+    navigate('/forgot-password');
+  };
+
+  const goToHome = () => {
+    navigate('/');
   };
 
   return (
+    <>
+    <SimpleNavbar/>
     <div id="ulogin">
       <h1>Login</h1>
       <form onSubmit={handleLogin}>
@@ -48,11 +55,10 @@ function ULogin() {
           required
         />
 
-        {/* Forgot Password Link */}
         <div style={{ marginBottom: '10px', textAlign: 'right' }}>
-          <button 
-            type="button" 
-            onClick={handleForgotPassword} 
+          <button
+            type="button"
+            onClick={handleForgotPassword}
             style={{
               background: 'none',
               border: 'none',
@@ -74,7 +80,9 @@ function ULogin() {
         </button>
       </form>
     </div>
+    </>
   );
+    
 }
 
 export default ULogin;

@@ -1,4 +1,10 @@
 /* ULogin.css */
+/* index.css or Login.css */
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
 #ulogin {
   width: 100%;
   max-width: 400px;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './UDashboard.css';
-
+import UserNavbar from './UserNavbar';
 function Dashboard() {
     const navigate = useNavigate();
 
@@ -10,6 +10,8 @@ function Dashboard() {
         navigate('/');
     };
   return (
+    <>
+    <UserNavbar/>
     <div className="container">
       <header>
         <h1>Complaint Management Dashboard</h1>
@@ -36,6 +38,7 @@ function Dashboard() {
         </div>
       </main>
     </div>
+    </>
   );
 }
 

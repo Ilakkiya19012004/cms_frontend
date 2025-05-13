@@ -33,12 +33,14 @@ function App() {
       height: '100vh',
       width: '100vw',
     }}>
-      {/* Show navbar only if not on homepage */}
-      {location.pathname !== "/" && (
-        userRole === "admin" ? <AdminNavbar /> : <UserNavbar />
-      )}
-      
-
+{/*    
+      {!["/","/login", "/register", "/forgot-password"].includes(location.pathname) && (
+  <>
+    <AdminNavbar />
+    <UserNavbar />
+  </>
+)}   */}
+    
       <Routes>
         {/* User Routes */}
         <Route path="/" element={<HomePage />} />

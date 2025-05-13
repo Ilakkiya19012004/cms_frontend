@@ -1,11 +1,14 @@
 import { useLocation, useParams, Link } from "react-router-dom";
 import './TicketPage.css';
+import UserNavbar from "./UserNavbar";
 
 function TicketPage() {
   const { id } = useParams();
   const { state: ticket } = useLocation();
 
   return (
+    <>
+    <UserNavbar/>
     <div className="ticket-container">
       <h2>Complaint Submitted Successfully</h2>
       <p><strong>Ticket ID:</strong> #{id}</p>
@@ -21,6 +24,7 @@ function TicketPage() {
         </Link>
       </p>
     </div>
+    </>
   );
 }
 

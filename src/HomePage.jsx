@@ -12,7 +12,7 @@ const HomePage = () => {
   return (
     <div className="homepage">
       <header className="header">
-        <div className="logo">SONY</div>
+        <div className="logo">CMS</div>
         <nav className="nav">
           <ul>
             <li  onClick={handleLoginClick} style={{ cursor: 'pointer' }}>

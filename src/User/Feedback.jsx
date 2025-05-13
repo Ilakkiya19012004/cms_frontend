@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Feedback.css';
+import UserNavbar from './UserNavbar';
 
 function Feedback() {
   const [rating, setRating] = useState(0);
@@ -16,6 +17,8 @@ function Feedback() {
   };
 
   return (
+    <>
+    <UserNavbar/>
     <div className="feedback-container">
       <h2>Give Feedback</h2>
 
@@ -52,6 +55,7 @@ function Feedback() {
         <button type="submit">Submit Feedback</button>
       </form>
     </div>
+    </>
   );
 }
 

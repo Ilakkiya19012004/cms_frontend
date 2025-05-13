@@ -1,4 +1,5 @@
 import './ComplaintStatus.css'; 
+import UserNavbar from './UserNavbar';
 
 function ComplaintStatus() {
   const complaints = [
@@ -35,6 +36,8 @@ function ComplaintStatus() {
   };
 
   return (
+    <>
+    <UserNavbar/>
     <div id="complaintStatus">
       <h1>Complaint Status</h1>
       <table>
@@ -62,6 +65,7 @@ function ComplaintStatus() {
         </tbody>
       </table>
     </div>
+    </>
   );
 }
 
