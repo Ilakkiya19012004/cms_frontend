@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import './Register.css';
 
 function Register() {
+  const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -20,10 +21,10 @@ function Register() {
     } else {
       setError("");
       setSuccess("Registration successful!");
-      console.log("Registered with:", { email, password });
+      console.log("Registered with:", { username, email, password });
 
       setTimeout(() => {
-        navigate("/");
+        navigate("/login");
       }, 1500);
     }
   };
@@ -32,6 +33,13 @@ function Register() {
     <div id="register">
       <h2>Register</h2>
       <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="Username"
+          value={username}
+          required
+          onChange={(e) => setUsername(e.target.value)}
+        />
         <input
           type="email"
           placeholder="Email"

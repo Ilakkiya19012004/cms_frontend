@@ -9,16 +9,21 @@ function ULogin() {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    if(email==="admin@gmail.com"&&password==="123"){
+    if (email === "admin@gmail.com" && password === "123") {
       navigate('/adashboard');
-    }
-    else
+    } else {
       navigate('/udashboard');
+    }
   };
 
   const handleRegister = (e) => {
     e.preventDefault();
     navigate('/register');
+  };
+
+  const handleForgotPassword = (e) => {
+    e.preventDefault();
+    navigate('/forgot-password'); // You can create this route/component
   };
 
   return (
@@ -43,7 +48,25 @@ function ULogin() {
           required
         />
 
-        <button onClick={handleLogin} type="submit" disabled={!email || !password}>
+        {/* Forgot Password Link */}
+        <div style={{ marginBottom: '10px', textAlign: 'right' }}>
+          <button 
+            type="button" 
+            onClick={handleForgotPassword} 
+            style={{
+              background: 'none',
+              border: 'none',
+              color: 'blue',
+              textDecoration: 'underline',
+              cursor: 'pointer',
+              fontSize: '0.9rem'
+            }}
+          >
+            Forgot Password?
+          </button>
+        </div>
+
+        <button type="submit" disabled={!email || !password}>
           Login
         </button>
         <button onClick={handleRegister} type="button">

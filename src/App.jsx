@@ -16,18 +16,16 @@ import ComplaintDetails from "./Admin/ComplaintDetails.jsx";
 import UserNavbar from "./User/UserNavbar.jsx";
 import AdminNavbar from "./Admin/AdminNavbar.jsx";
 import { useState } from "react";
-import image1 from './assets/image4.png';
+import image from './assets/image4.png';
+import PasswordReset from "./User/PasswordReset.jsx";
 
 function App() {
   const [userRole] = useState("USER");
   const location = useLocation();
-  console.log("Current path:", location.pathname);
-
-
 
   return (
     <div style={{
-      backgroundImage: `url(${image1})`,
+      backgroundImage: `url(${image})`,
       backgroundRepeat: 'repeat',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
@@ -45,6 +43,7 @@ function App() {
         {/* User Routes */}
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<Login/>}/>
+        <Route path="/forgot-password" element={<PasswordReset />}/>
         <Route path="/udashboard" element={<UDashboard />} />
         <Route path="/register" element={<Register />} />
         <Route path="/complaint" element={<ComplaintForm />} />
