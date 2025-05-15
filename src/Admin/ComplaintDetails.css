@@ -8,3 +8,32 @@
     background-color: #ffffff;
     margin-top: 100px;
 }
+
+.button-section , .status-section {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;
+}
+
+.edit-button, .update-button {
+  padding: 8px 16px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.update-button {
+  background-color: #28a745;
+}
+
+.edit-button:hover {
+  background-color: #0056b3;
+}
+
+.update-button:hover {
+  background-color: #218838;
+}
