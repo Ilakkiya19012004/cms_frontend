@@ -1,12 +1,23 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import LandingNav from './LandingNav.jsx';
+
 function ALanding() {
   const navigate = useNavigate();
   const [selectedCity, setSelectedCity] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleCityChange = (event) => {
     setSelectedCity(event.target.value);
+  };
+
+  const handleNavigation = (path) => {
+    if (!selectedCity) {
+      setErrorMessage('Please select a city before proceeding.');
+      setTimeout(() => setErrorMessage(''), 3000); // hide after 3 seconds
+    } else {
+      navigate(path);
+    }
   };
 
   const handleLogout = () => {
@@ -22,7 +33,7 @@ function ALanding() {
         </header>
         <main>
           <h2>Manage Complaints Efficiently</h2>
-          
+
           {/* Select City Dropdown */}
           <div>
             <label htmlFor="city">Select City:</label>
@@ -35,16 +46,29 @@ function ALanding() {
             </select>
           </div>
 
+          {/* Error Message */}
+          {errorMessage && (
+            <div style={{ color: 'red', marginTop: '10px' }}>
+              {errorMessage}
+            </div>
+          )}
+
           <p>Select an option to view and manage customer complaints:</p>
           <div className="button-grid">
-            <Link to="/aDashboard" className="dashboard-btn">
+            <button
+              className="dashboard-btn"
+              onClick={() => handleNavigation('/aDashboard')}
+            >
               <span role="img" aria-label="all">📄</span>
               <p>Locate Service Center</p>
-            </Link>
-            <Link to="/aDashboard" className="dashboard-btn">
+            </button>
+            <button
+              className="dashboard-btn"
+              onClick={() => handleNavigation('/aDashboard')}
+            >
               <span role="img" aria-label="new">🆕</span>
               <p>Home Service</p>
-            </Link>
+            </button>
           </div>
         </main>
       </div>
