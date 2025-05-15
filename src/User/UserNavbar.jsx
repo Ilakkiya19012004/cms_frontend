@@ -8,7 +8,7 @@ const UserNavbar = () => {
     <nav className="navbar">
       <div className="nav-left">
         <span>☰</span>
-        <span className="brand">COMPLAINT MANAGEMENT SYSTEM</span>
+        <span className="brand">ELECTRO CARE</span>
       </div>
       <div className="nav-right">
         <Link to="/udashboard" className="nav-link">DASHBOARD</Link>

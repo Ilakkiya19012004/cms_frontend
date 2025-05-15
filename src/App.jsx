@@ -18,6 +18,7 @@ import image from './assets/image4.png';
 import PasswordReset from "./User/PasswordReset.jsx";
 import ServiceType from "./User/ServiceType.jsx";
 import ALanding from "./Admin/ALanding.jsx";
+import UComplaintDetails from "./User/UComplaintDetails.jsx";
 function App() {
 
   return (
@@ -43,6 +44,7 @@ function App() {
         <Route path="/complaint2" element={<ComplaintForm2 />} />
         <Route path="/complaintStatus" element={<ComplaintStatus />} />
         <Route path="/ticket/:id" element={<TicketPage />} />
+        <Route path="/ucomplaint-details/:id" element={<UComplaintDetails />} />
         <Route path="/feedback" element={<Feedback />} />
 
         {/* Admin Routes */}

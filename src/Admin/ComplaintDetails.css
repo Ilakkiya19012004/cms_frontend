@@ -16,6 +16,10 @@
   align-items: center;
 }
 
+.status-section {
+  margin: 20px 0;
+}
+
 .edit-button, .update-button {
   padding: 8px 16px;
   margin-right: 10px;

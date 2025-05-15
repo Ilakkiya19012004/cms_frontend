@@ -8,7 +8,7 @@ const AdminNavbar = () => {
     <nav className="admin-navbar">
       <div className="nav-left">
         <span>☰</span>
-        <span className="brand">COMPLAINT MANAGEMENT SYSTEM</span>
+        <span className="brand">ELECTRO CARE</span>
       </div>
       <div className="nav-right">
         <Link to="/aDashboard" className="nav-link">DASHBOARD</Link>

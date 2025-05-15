@@ -5,7 +5,7 @@ const SimpleNavbar = () => {
   return (
     <nav style={navStyle}>
       <div style={leftSection}>
-        <span style={brandStyle}>COMPLAINT MANAGEMENT SYSTEM</span>
+        <span style={brandStyle}>ELECTRO CARE</span>
       </div>
       <div style={rightSection}>
         <Link to="/" style={linkStyle}>Logout</Link>

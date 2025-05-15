@@ -12,6 +12,7 @@ function ComplaintStatus() {
       udate: '01-04-2025',
       cdate: '20-03-2025',
       warranty: 'Valid till 20-03-2026',
+      description:'Ac not cooling'
     },
     {
       id: 2,
@@ -21,6 +22,7 @@ function ComplaintStatus() {
       udate: '01-03-2025',
       cdate: '25-02-2025',
       warranty: 'Expired on 25-02-2024',
+      description:'Ac not cooling'
     },
     {
       id: 3,
@@ -30,6 +32,7 @@ function ComplaintStatus() {
       udate: '01-02-2025',
       cdate: '30-01-2025',
       warranty: 'Valid till 30-01-2026',
+      description:'Ac not cooling'
     },
   ];
 
@@ -69,7 +72,7 @@ function ComplaintStatus() {
               <td>{c.udate}</td>
               <td>{c.cdate}</td>
               <td>{c.warranty}</td>
-              <td><Link to={`/complaint-details/${c.id}`} state={c}>View Details</Link></td>
+              <td><Link to={`/ucomplaint-details/${c.id}`} state={c}>View Details</Link></td>
             </tr>
           ))}
         </tbody>
